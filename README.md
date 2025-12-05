@@ -5,7 +5,7 @@
 3. 调用LLM，根据用户输入、情感、立场、场景和RAG结果，生成最终回复。
 
 ### Usage
-1.cd backend  python main.py 开启后端
-2.cd frontend node sys.js 开启前端
+1. cd backend  python main.py 开启后端
+2. cd frontend node sys.js 开启前端
 
 
