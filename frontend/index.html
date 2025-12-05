@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>前端对话系统</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">知识型对话生成系统</div>
+    <div class="header-tools">
+      <button id="clearBtn" class="btn">清空</button>
+      <div class="status" id="status">就绪</div>
+    </div>
+  </header>
+  <main class="layout">
+    <section class="panel chat-panel">
+      <div class="panel-title">主对话框</div>
+      <div id="messages" class="messages"></div>
+      <form id="composer" class="composer">
+        <textarea id="input" class="input" rows="3" placeholder="输入消息，Enter 发送，Shift+Enter 换行"></textarea>
+        <button type="submit" class="send">发送</button>
+      </form>
+      
+    </section>
+    <section class="panel nlu-panel">
+      <div class="panel-title">
+        <span>复杂自然语言理解</span>
+        <button id="toggleNLU" class="btn btn-link">折叠</button>
+      </div>
+      <div class="nlu-rows">
+        <div class="nlu-row"><div class="nlu-row-label">情感识别</div><div id="nluSentiment" class="nlu-row-box"></div></div>
+        <div class="nlu-row"><div class="nlu-row-label">立场识别</div><div id="nluStance" class="nlu-row-box"></div></div>
+        <div class="nlu-row"><div class="nlu-row-label">场景识别</div><div id="nluScene" class="nlu-row-box"></div></div>
+      </div>
+    </section>
+    <section class="panel citations-panel">
+      <div class="panel-title">
+        <span>外源知识引用</span>
+        <button id="toggleCitations" class="btn btn-link">折叠</button>
+      </div>
+      <div class="rag-box" id="ragBox"></div>
+    </section>
+  </main>
+  <div id="toast" class="toast"></div>
+  <script src="api.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
