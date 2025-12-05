@@ -15,7 +15,7 @@ class deepseek_api():
         self.client = OpenAI(api_key=api_key, base_url="https://api.deepseek.com")
         
 
-    
+     
 
     def __call__(self,query,prompt="You are a helpful assistant",out=True):
         response = self.client.chat.completions.create(
